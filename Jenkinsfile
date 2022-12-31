@@ -8,5 +8,12 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        input(message: 'Do you want to build? Y/N', id: 'Y')
+        echo 'Starting Building Demo'
+      }
+    }
+
   }
 }
